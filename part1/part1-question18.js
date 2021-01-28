@@ -10,6 +10,6 @@ let statistics = {
 
 for (const stats in statistics) {
     if (stats[0] == 'r' || statistics[stats] % 2 == 1) {
-        console.log(`${statistics[stats]}`);
+        console.log(statistics[stats]);
     }
 }
