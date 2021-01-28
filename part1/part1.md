@@ -65,7 +65,7 @@
       - '3undefined'
       - '3' is a string literal and so 'undefined' is concatenated to '3'with the + sign.
     - “3” - undefined
-      - Nan
+      - NaN
       - undefined cannot be converted into a number so the subtraction will fail and output 'NaN' which is not a number.
 
 15. Comparison
