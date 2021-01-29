@@ -8,11 +8,11 @@
 
 3. What will happen at line 13 and why?
    
-   At line 13, `console.log(finalPrice)` will print the value of `finalPrice` to the console. Since at line 13, we have already iterated through `prices` in the for loop so `finalPrice` will contain the last `discountedPrice` * 100 rounded and then divided by 100. ANd once again since the `var` is used, `finalPrice` is function-scoped.
+   At line 13, `console.log(finalPrice)` will print the value of `finalPrice` to the console. Since at line 13, we have already iterated through `prices` in the for loop so `finalPrice` will contain the last `discountedPrice` * 100 rounded and then divided by 100. And once again since the `var` is used, `finalPrice` is function-scoped.
 
 4. What will the function return if we call discountPrices([100, 200, 300], .5) ? Give a brief explanation.
    
-   The function will return [50, 100, 150] because if we call `discountPrices([100, 200, 300], .5) ` , the array [100, 200, 300] will be stored in `prices` and 0.5 will be stored in `discount`. For the for loop, the following things happen: the for loop iterates three times because `prices.length` = 3 and on each element it calculates the element * (1 - 0.5) which is stored in `discountedPrice` and for 100, 200, 300 respectively `discountedPrice` will store 50, 100, 150.Then Math.round rounds it to the nearest integer after multiplying it by 100 and then divides by 100 which is rounding the `discountedPrice` and stores it in `finalPrice` and for 50, 100, 150 respectively it will store 50, 100, 150. And then pushed into the `discounted` array. So for 100 we will get 50 pushed in to `discounted`, for 200 we push 100 and for 300 we push 150. So when we return `discounted` we get [50, 100, 150].
+   The function will return [50, 100, 150] because if we call `discountPrices([100, 200, 300], .5) ` , the array [100, 200, 300] will be stored in `prices` and 0.5 will be stored in `discount`. For the for loop, the following things happen: the for loop iterates three times because `prices.length` = 3 and on each element it calculates the element * (1 - 0.5) which is stored in `discountedPrice` and for 100, 200, 300 respectively `discountedPrice` will store 50, 100, 150.Then Math.round rounds it to the nearest integer after multiplying it by 100 and then divides by 100 which is rounding the `discountedPrice` to the ones place and stores it in `finalPrice` and for 50, 100, 150 respectively it will store 50, 100, 150. And then pushed into the `discounted` array. So for 100 we will get 50 pushed in to `discounted`, for 200 we push 100 and for 300 we push 150. So when we return `discounted` we get [50, 100, 150].
 
 5. What will happen at line 11 and why?
    
@@ -109,7 +109,7 @@
 
 16. Explain the difference between the == and === operators.
     
-    === is strictly equals so there will be no type conversion and it will compare the types of the two sides as well as the values. == lets conversion happen so even if the two sides weren't originally the same type, they might be converted and end up equaling.
+    === is strictly equals so there will be no type conversion. == lets conversion happen so even if the two sides weren't originally the same type, they might be converted and end up equaling.
 
 17. From the code snippet below, explain what gets printed and why.  (This should be in your part1.md)
     
@@ -119,7 +119,7 @@
     
 19. If the function below is called with the following parameters modifyArray([1,2,3], doSomething), what will be the result? Briefly walk through how you arrived at that result. (This should be in your part1.md)
     
-    The result would be [6, 8, 10] because first of all, doSomething is callback in modfiyArray. And then for loop would iterate three times for 1, 2, 3 respectively and newArr pushed the value of this whole chunk where callback is doSomething which adds 2 and then returns the element + 2 to function(x) which multiplies it by 2. So we get 6, 8, 10 respectively.  
+    The result would be [6, 8, 10] because first of all, doSomething is callback in modfiyArray. And then the for loop would iterate a total of three times, with 1, 2, 3 respectively and newArr pushed the value of this whole chunk where callback is doSomething which adds 2 and then returns the element + 2 to function(x) which multiplies it by 2. So we get 6, 8, 10 respectively.  
 
 20. Code in part1-question20.js
     
