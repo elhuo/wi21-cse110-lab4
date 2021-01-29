@@ -16,6 +16,7 @@ Once it finishes downloading, answer the following questions:
    - 11.7 MB 
 4. How long did it take to download?
    - 17.68 s
+  
 Next, select that file to bring up a new side panel to answer the following:
 
   5. What was your User-Agent for the browser that made the request?
@@ -26,7 +27,8 @@ Next, select that file to bring up a new side panel to answer the following:
       - Tue, 26 Jan 2021 22:14:13 GMT
   8. What was the Content-Type of the file?
       - application/json
+  
 Navigate to the Initiator tab now and answer the last question
 
   9. Which method inside the initiating file made the request?
-      - fetchData()
+      - fetchData
